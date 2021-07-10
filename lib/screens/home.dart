@@ -5,8 +5,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Hello World'),
+    final PageController controller = PageController(initialPage: 0);
+    return PageView(
+      scrollDirection: Axis.horizontal,
+      controller: controller,
+      children: const <Widget>[
+        Scaffold(
+          body: Text('First Page'),
+        ),
+        Scaffold(
+          body: Text('Second Page'),
+        ),
+        Scaffold(
+          body: Text('Third Page'),
+        ),
+      ],
     );
   }
 }
