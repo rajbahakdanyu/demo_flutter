@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/slide_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,15 +12,9 @@ class HomePage extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       controller: controller,
       children: const <Widget>[
-        Scaffold(
-          body: Text('First Page'),
-        ),
-        Scaffold(
-          body: Text('Second Page'),
-        ),
-        Scaffold(
-          body: Text('Third Page'),
-        ),
+        SlidePage(title: "First Page"),
+        SlidePage(title: "First Page"),
+        SlidePage(title: "First Page"),
       ],
     );
   }
