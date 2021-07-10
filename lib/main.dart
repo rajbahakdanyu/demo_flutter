@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/home.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,17 +15,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Hello World'),
     );
   }
 }
