@@ -1,9 +1,9 @@
 import 'package:avatars/avatars.dart';
+import 'package:demo/components/expense_list.dart';
 import 'package:flutter/material.dart';
 
 import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';
-import '../components/expense_item.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -53,51 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
               color: Colors.blue,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 30.0, top: 20.0),
-            child: Container(
-              height: 190.0,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  bottomLeft: Radius.circular(20),
-                ),
-              ),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  ExpenseItem(
-                    iconColor: Colors.blue,
-                    itemIcon: Icons.shopping_cart_outlined,
-                    itemColor: Colors.white,
-                    expense: '\$168.50',
-                    expenseColor: Colors.black,
-                    expenseTitle: 'Grocery',
-                    progress: 0.6,
-                  ),
-                  ExpenseItem(
-                    iconColor: Colors.white,
-                    itemIcon: Icons.local_hospital_outlined,
-                    itemColor: Colors.blue.shade400,
-                    expense: '\$95.35',
-                    expenseColor: Colors.white,
-                    expenseTitle: 'Medicine',
-                    progress: 0.4,
-                  ),
-                  ExpenseItem(
-                    iconColor: Colors.blue,
-                    itemIcon: Icons.coffee_outlined,
-                    itemColor: Colors.white,
-                    expense: '\$57.99',
-                    expenseColor: Colors.black,
-                    expenseTitle: 'Cafe',
-                    progress: 0.2,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          ExpenseList()
         ],
       ),
       bottomNavigationBar: ClipRRect(
