@@ -1,10 +1,11 @@
-import 'package:demo/components/trans_row.dart';
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
 import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';
 import '../components/demo_card.dart';
 import '../components/refer_card.dart';
+import '../components/trans_row.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -45,6 +46,19 @@ class _LandingPageState extends State<LandingPage> {
               children: [
                 ReferCard(),
                 TransRow(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 5.0,
+                    horizontal: 20.0,
+                  ),
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    child: Row(
+                      children: [],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
