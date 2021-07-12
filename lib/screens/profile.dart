@@ -1,10 +1,10 @@
 import 'package:avatars/avatars.dart';
-import 'package:demo/components/expense_list.dart';
-import 'package:demo/components/profile_row.dart';
 import 'package:flutter/material.dart';
 
 import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';
+import '../components/expense_list.dart';
+import '../components/profile_row.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -56,6 +56,12 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           ExpenseList(),
           ProfileRow(),
+          Container(
+            height: 190,
+            child: Image.network(
+              'https://www.anychart.com/chartopedia/resources/images/chart-type/spline-chart.png',
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: ClipRRect(

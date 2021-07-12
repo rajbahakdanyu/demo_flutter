@@ -23,9 +23,6 @@ dependencies:
     # Avatar
     avatars: ^2.1.0
 
-    # Graph
-    syncfusion_flutter_charts: ^19.2.46+1
-
 dev_dependencies:
     flutter_test:
         sdk: flutter
