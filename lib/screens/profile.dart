@@ -14,6 +14,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: TopNav(
         navWidget: IconButton(
           onPressed: null,
