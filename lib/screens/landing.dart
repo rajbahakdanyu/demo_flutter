@@ -21,7 +21,9 @@ class _LandingPageState extends State<LandingPage> {
           topLeft: Radius.circular(35.0),
           topRight: Radius.circular(35.0),
         ),
-        child: BottomNav(),
+        child: BottomNav(
+          currentIndex: 0,
+        ),
       ),
     );
   }

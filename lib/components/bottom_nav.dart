@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BottomNav extends StatelessWidget {
-  const BottomNav({Key? key}) : super(key: key);
+  final int currentIndex;
+
+  const BottomNav({Key? key, required this.currentIndex}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +15,15 @@ class BottomNav extends StatelessWidget {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       iconSize: 30,
-      currentIndex: 0,
+      currentIndex: currentIndex,
       onTap: (int i) {
-        print(i);
+        if (i == 0) {
+          print('Go to landing page');
+        }
+
+        if (i == 3) {
+          print('Go to profile page');
+        }
       },
       items: [
         BottomNavigationBarItem(
