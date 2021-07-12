@@ -1,3 +1,4 @@
+import 'package:demo/components/demo_card.dart';
 import 'package:demo/components/top_nav.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,9 @@ class _LandingPageState extends State<LandingPage> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [],
+        children: [
+          DemoCard(),
+        ],
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
