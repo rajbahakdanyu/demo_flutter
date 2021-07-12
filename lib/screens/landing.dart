@@ -46,7 +46,16 @@ class _LandingPageState extends State<LandingPage> {
               children: [
                 ReferCard(),
                 TransRow(),
-                TransItem(),
+                TransItem(
+                  name: 'Bill Gate',
+                  date: '12 July, 2021',
+                  amount: '+\$145.00',
+                ),
+                TransItem(
+                  name: 'Elon Musk',
+                  date: '4 July, 2021',
+                  amount: '-\$434.00',
+                ),
               ],
             ),
           ),

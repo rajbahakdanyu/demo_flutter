@@ -3,7 +3,12 @@ import 'package:styled_text/styled_text.dart';
 import 'package:avatars/avatars.dart';
 
 class TransItem extends StatelessWidget {
-  const TransItem({Key? key}) : super(key: key);
+  final String name;
+  final String date;
+  final String amount;
+
+  const TransItem(
+      {required this.name, required this.date, required this.amount});
 
   @override
   Widget build(BuildContext context) {
@@ -13,44 +18,48 @@ class TransItem extends StatelessWidget {
         horizontal: 20.0,
       ),
       child: Container(
-        height: 80,
+        height: 75,
         width: double.infinity,
         child: Row(
           children: [
             Avatar(
-              name: 'Bill Gate',
+              name: name,
               shape: AvatarShape.rectangle(
                 50,
                 50,
                 BorderRadius.all(new Radius.circular(5.0)),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: StyledText(
-                text: '<black>Bill Gates</black> \n<grey>12 July, 2021</grey>',
-                tags: {
-                  'black': StyledTextTag(
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: StyledText(
+                  text: '<black>$name</black> \n<grey>$date</grey>',
+                  tags: {
+                    'black': StyledTextTag(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      ),
                     ),
-                  ),
-                  'grey': StyledTextTag(
-                    style: TextStyle(
-                      color: Colors.grey,
+                    'grey': StyledTextTag(
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
                     ),
-                  ),
-                },
+                  },
+                ),
               ),
             ),
-            SizedBox(width: 100),
-            Text(
-              '\$145.00',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Text(
+                amount,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
