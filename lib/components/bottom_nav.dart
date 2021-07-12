@@ -18,12 +18,10 @@ class BottomNav extends StatelessWidget {
       currentIndex: currentIndex,
       onTap: (int i) {
         if (i == 0) {
-          print('Go to landing page');
           Navigator.popAndPushNamed(context, 'landing');
         }
 
         if (i == 3) {
-          print('Go to profile page');
           Navigator.popAndPushNamed(context, 'profile');
         }
       },

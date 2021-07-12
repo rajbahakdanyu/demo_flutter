@@ -13,6 +13,15 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text(
+          'CashyBank',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       body: Center(
         child: Text('Landing Page'),
       ),

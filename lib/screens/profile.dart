@@ -14,7 +14,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Landing Page'),
+        child: Text('Profile Page'),
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
