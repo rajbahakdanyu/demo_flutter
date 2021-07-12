@@ -15,11 +15,25 @@ class SlidePage extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Center(
-        child: Text(
-          title,
-          style: TextStyle(color: Colors.white, fontSize: 40.0),
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 40.0,
+            ),
+          ),
+          Text(
+            'This is the $title  of the demo.',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+        ],
       ),
     );
   }
