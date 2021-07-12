@@ -8,8 +8,19 @@ class SlidePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(title),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage("https://wallpaperaccess.com/full/3119143.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'Welcome To',
+            style: TextStyle(color: Colors.white, fontSize: 40.0),
+          ),
+        ),
       ),
     );
   }
