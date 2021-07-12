@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
 import '../components/bottom_nav.dart';
 
@@ -17,9 +18,20 @@ class _LandingPageState extends State<LandingPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Text(
-          'CashyBank',
-          style: TextStyle(color: Colors.black),
+        title: StyledText(
+          text: '<black><blue>Cashy</blue>Bank</black>',
+          tags: {
+            'black': StyledTextTag(
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            'blue': StyledTextTag(
+              style: TextStyle(
+                color: Colors.blue,
+              ),
+            ),
+          },
         ),
       ),
       body: Center(
