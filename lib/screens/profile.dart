@@ -16,6 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: TopNav(
+        navColor: Colors.white,
         navWidget: IconButton(
           onPressed: null,
           icon: Icon(Icons.settings_outlined),

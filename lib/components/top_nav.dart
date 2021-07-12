@@ -3,8 +3,9 @@ import 'package:styled_text/styled_text.dart';
 
 class TopNav extends StatelessWidget implements PreferredSizeWidget {
   final Widget navWidget;
+  final Color? navColor;
 
-  const TopNav({required this.navWidget});
+  const TopNav({required this.navWidget, required this.navColor});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -12,7 +13,7 @@ class TopNav extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: navColor,
       elevation: 0,
       title: StyledText(
         text: '<black><blue>Cashy</blue>Bank</black>',

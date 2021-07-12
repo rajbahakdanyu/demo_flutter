@@ -14,8 +14,9 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[200],
       appBar: TopNav(
+        navColor: Colors.grey[200],
         navWidget: IconButton(
           onPressed: null,
           icon: Icon(Icons.notifications_none),
