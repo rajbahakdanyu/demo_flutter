@@ -58,7 +58,7 @@ class ExpenseItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: LinearProgressIndicator(
-                backgroundColor: Colors.grey[200],
+                backgroundColor: Colors.black45,
                 color: iconColor,
                 value: progress,
                 semanticsLabel: 'Linear progress indicator',
