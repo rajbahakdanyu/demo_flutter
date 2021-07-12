@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 14, 71, 161),
       body: PageView(
         controller: controller,
         children: [
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                 effect: WormEffect(
                   dotWidth: 10,
                   dotHeight: 10,
-                  activeDotColor: Colors.red,
+                  activeDotColor: Colors.white,
                 ),
               ),
             ),
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
               child: Text(
                 'Skip',
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Colors.white,
                   fontSize: 16,
                 ),
               ),

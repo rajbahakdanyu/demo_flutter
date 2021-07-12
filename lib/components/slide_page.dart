@@ -10,7 +10,8 @@ class SlidePage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage("https://wallpapercave.com/wp/wp3432515.jpg"),
+          image: NetworkImage(
+              "https://www.teahub.io/photos/full/247-2475159_hd-abstract-wallpaper-for-mobile.jpg"),
           fit: BoxFit.cover,
         ),
       ),
