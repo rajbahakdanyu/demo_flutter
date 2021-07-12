@@ -15,6 +15,7 @@ class _LandingPageState extends State<LandingPage> {
         child: Text('Landing Page'),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.grey[200],
         selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.black,
