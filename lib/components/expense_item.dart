@@ -51,6 +51,7 @@ class ExpenseItem extends StatelessWidget {
                 expense,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
+                  color: expenseColor,
                 ),
               ),
             ),
