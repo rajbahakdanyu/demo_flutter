@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
 import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';

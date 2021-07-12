@@ -20,6 +20,9 @@ dependencies:
     # Style Text
     styled_text: ^3.0.1
 
+    # Avatar
+    avatars: ^2.1.0
+
 dev_dependencies:
     flutter_test:
         sdk: flutter
