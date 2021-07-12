@@ -9,13 +9,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final PageController controller = PageController(initialPage: 0);
 
-    return PageView(
-      scrollDirection: Axis.horizontal,
-      controller: controller,
-      children: const <Widget>[
-        SlidePage(title: "First Page"),
-        SlidePage(title: "Second Page"),
-        SlidePage(title: "Third Page"),
+    return Column(
+      children: [
+        PageView(
+          scrollDirection: Axis.horizontal,
+          controller: controller,
+          children: const <Widget>[
+            SlidePage(title: "First Page"),
+            SlidePage(title: "Second Page"),
+            SlidePage(title: "Third Page"),
+          ],
+        ),
       ],
     );
   }

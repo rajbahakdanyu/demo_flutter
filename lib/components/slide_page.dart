@@ -17,7 +17,7 @@ class SlidePage extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Welcome To',
+            title,
             style: TextStyle(color: Colors.white, fontSize: 40.0),
           ),
         ),
