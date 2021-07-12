@@ -1,3 +1,4 @@
+import 'package:demo/components/top_nav.dart';
 import 'package:flutter/material.dart';
 
 import '../components/bottom_nav.dart';
@@ -13,6 +14,12 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: TopNav(
+        navWidget: IconButton(
+          onPressed: null,
+          icon: Icon(Icons.settings_outlined),
+        ),
+      ),
       body: Center(
         child: Text('Profile Page'),
       ),
