@@ -18,12 +18,21 @@ class HomePage extends StatelessWidget {
           SlidePage(title: 'Third Page'),
         ],
       ),
-      bottomNavigationBar: SmoothPageIndicator(
-        controller: controller,
-        count: 3,
-        effect: WormEffect(
-          activeDotColor: Colors.white,
-        ),
+      bottomNavigationBar: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: SmoothPageIndicator(
+              controller: controller,
+              count: 3,
+              effect: WormEffect(
+                dotWidth: 10,
+                dotHeight: 10,
+                activeDotColor: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
