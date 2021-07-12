@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../components/slide_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final PageController controller = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
-    final PageController controller = PageController(initialPage: 0);
-
-    return Column(
-      children: [
-        PageView(
-          scrollDirection: Axis.horizontal,
-          controller: controller,
-          children: const <Widget>[
-            SlidePage(title: "First Page"),
-            SlidePage(title: "Second Page"),
-            SlidePage(title: "Third Page"),
-          ],
-        ),
-      ],
+    return Scaffold(
+      backgroundColor: Colors.grey.shade300,
+      body: PageView(
+        controller: controller,
+        children: [
+          SlidePage(
+            title: 'First Page',
+            controller: controller,
+          ),
+          SlidePage(
+            title: 'Second Page',
+            controller: controller,
+          ),
+          SlidePage(
+            title: 'Third Page',
+            controller: controller,
+          ),
+        ],
+      ),
     );
   }
 }
