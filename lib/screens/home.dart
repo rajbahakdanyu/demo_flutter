@@ -9,23 +9,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.black,
       body: PageView(
         controller: controller,
         children: [
-          SlidePage(
-            title: 'First Page',
-            controller: controller,
-          ),
-          SlidePage(
-            title: 'Second Page',
-            controller: controller,
-          ),
-          SlidePage(
-            title: 'Third Page',
-            controller: controller,
-          ),
+          SlidePage(title: 'First Page'),
+          SlidePage(title: 'Second Page'),
+          SlidePage(title: 'Third Page'),
         ],
+      ),
+      bottomNavigationBar: SmoothPageIndicator(
+        controller: controller,
+        count: 3,
+        effect: WormEffect(
+          activeDotColor: Colors.white,
+        ),
       ),
     );
   }
