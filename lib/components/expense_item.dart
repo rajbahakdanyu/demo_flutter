@@ -7,6 +7,7 @@ class ExpenseItem extends StatelessWidget {
   final String expense;
   final String expenseTitle;
   final Color expenseColor;
+  final double progress;
 
   const ExpenseItem({
     required this.iconColor,
@@ -15,6 +16,7 @@ class ExpenseItem extends StatelessWidget {
     required this.expense,
     required this.expenseTitle,
     required this.expenseColor,
+    required this.progress,
   });
 
   @override
@@ -58,7 +60,7 @@ class ExpenseItem extends StatelessWidget {
               child: LinearProgressIndicator(
                 backgroundColor: Colors.grey[200],
                 color: iconColor,
-                value: 0.6,
+                value: progress,
                 semanticsLabel: 'Linear progress indicator',
               ),
             ),
