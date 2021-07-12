@@ -1,8 +1,9 @@
-import 'package:demo/components/demo_card.dart';
-import 'package:demo/components/top_nav.dart';
 import 'package:flutter/material.dart';
 
+import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';
+import '../components/demo_card.dart';
+import '../components/refer_card.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                DemoCard(),
+                ReferCard(),
               ],
             ),
           ),
