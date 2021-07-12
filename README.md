@@ -11,7 +11,9 @@ from
 ## My Attempt
 
 -   Home Screen
+    <img src="./assets/home.png" alt="home" height="300"/>
     ![Home Screen](./assets/home.png)
 
 -   Profile Screen
-    ![Profile Screen](./assets/design.png)
+    <img src="./assets/profile.png" alt="profile" height="300"/>
+    ![Profile Screen](./assets/profile.png)
