@@ -20,15 +20,35 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: SmoothPageIndicator(
-              controller: controller,
-              count: 3,
-              effect: WormEffect(
-                dotWidth: 10,
-                dotHeight: 10,
-                activeDotColor: Colors.white,
+          Expanded(
+            flex: 5,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: SmoothPageIndicator(
+                controller: controller,
+                count: 3,
+                effect: WormEffect(
+                  dotWidth: 10,
+                  dotHeight: 10,
+                  activeDotColor: Colors.red,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size(50, 10),
+                alignment: Alignment.centerLeft,
+              ),
+              onPressed: () => {},
+              child: Text(
+                'Skip',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 16,
+                ),
               ),
             ),
           ),
