@@ -22,8 +22,26 @@ class _LandingPageState extends State<LandingPage> {
           icon: Icon(Icons.notifications_none),
         ),
       ),
-      body: Center(
-        child: Text('Landing Page'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Container(
+              height: 190,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xff42a5f5),
+                    Color(0xff90caf9),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
