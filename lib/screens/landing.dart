@@ -27,6 +27,24 @@ class _LandingPageState extends State<LandingPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           DemoCard(),
+          SizedBox(height: 10),
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(35),
+                topRight: Radius.circular(35),
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                DemoCard(),
+              ],
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: ClipRRect(
