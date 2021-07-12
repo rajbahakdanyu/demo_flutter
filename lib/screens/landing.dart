@@ -15,7 +15,12 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: TopNav(),
+      appBar: TopNav(
+        navWidget: IconButton(
+          onPressed: null,
+          icon: Icon(Icons.notifications_none),
+        ),
+      ),
       body: Center(
         child: Text('Landing Page'),
       ),
