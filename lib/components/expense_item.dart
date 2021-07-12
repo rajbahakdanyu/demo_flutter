@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ExpenseItem extends StatelessWidget {
-  const ExpenseItem({Key? key}) : super(key: key);
+  final IconData itemIcon;
+  final Color itemColor;
+  final Color iconColor;
+  final String expense;
+  final String expenseTitle;
+  final Color expenseColor;
+
+  const ExpenseItem({
+    required this.iconColor,
+    required this.itemIcon,
+    required this.itemColor,
+    required this.expense,
+    required this.expenseTitle,
+    required this.expenseColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +27,7 @@ class ExpenseItem extends StatelessWidget {
       ),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: itemColor,
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         width: 130.0,
@@ -24,15 +38,15 @@ class ExpenseItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: Icon(
-                Icons.shopping_cart_outlined,
-                color: Colors.blue,
+                itemIcon,
+                color: iconColor,
               ),
             ),
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: Text(
-                '\$168.50',
+                expense,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -43,7 +57,7 @@ class ExpenseItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: LinearProgressIndicator(
                 backgroundColor: Colors.grey[200],
-                color: Colors.blue,
+                color: iconColor,
                 value: 0.6,
                 semanticsLabel: 'Linear progress indicator',
               ),
@@ -52,7 +66,7 @@ class ExpenseItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: Text(
-                'Grocery',
+                expenseTitle,
                 style: TextStyle(
                   color: Colors.grey[400],
                   fontWeight: FontWeight.bold,

@@ -67,7 +67,14 @@ class _ProfilePageState extends State<ProfilePage> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  ExpenseItem(),
+                  ExpenseItem(
+                    iconColor: Colors.blue,
+                    itemIcon: Icons.shopping_cart_outlined,
+                    itemColor: Colors.white,
+                    expense: '\$168.50',
+                    expenseColor: Colors.black,
+                    expenseTitle: 'Grocery',
+                  ),
                 ],
               ),
             ),
