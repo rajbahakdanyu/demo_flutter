@@ -10,6 +10,10 @@ from
 
 ## My Attempt
 
+-   Landing Screen
+    <br>
+    <img src="./assets/landing.png" alt="landing" height="800"/>
+
 -   Home Screen
     <br>
     <img src="./assets/home.png" alt="home" height="800"/>
