@@ -42,7 +42,9 @@ class HomePage extends StatelessWidget {
                 minimumSize: Size(50, 10),
                 alignment: Alignment.centerLeft,
               ),
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.popAndPushNamed(context, 'landing'),
+              },
               child: Text(
                 'Skip',
                 style: TextStyle(
