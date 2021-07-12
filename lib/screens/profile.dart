@@ -1,6 +1,7 @@
-import 'package:demo/components/top_nav.dart';
+import 'package:avatars/avatars.dart';
 import 'package:flutter/material.dart';
 
+import '../components/top_nav.dart';
 import '../components/bottom_nav.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -22,8 +23,53 @@ class _ProfilePageState extends State<ProfilePage> {
           icon: Icon(Icons.settings_outlined),
         ),
       ),
-      body: Center(
-        child: Text('Profile Page'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Avatar(
+            name: 'John Doe',
+            shape: AvatarShape.circle(35),
+          ),
+          Text(
+            'John Doe',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
+          ),
+          Text(
+            'Total Spending',
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
+            ),
+          ),
+          Text(
+            '\$3,633',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 20.0, top: 20.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Text('Hello'),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
